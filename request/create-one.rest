@@ -1,15 +1,25 @@
 
-POST http://localhost:3001/api/ 
-
-   
+POST http://localhost:3002/api/user HTTP/1.1
 content-type: application/json
 
 {
-    "email": "ac@shiddiqaja.gm",
-    "password": "secret",
-    "firstname": "A",
-    "minit": "la",
-    "lastname": "camara"
+    "email":"sgdk@yudid.gm",
+    "password": "jskidicx",
+    "firstname":"fatima",
+    "minit":"",
+    "lastname":"trawalleh"   
+}
 
-   
+
+
+###
+POST http://localhost:3002/api/sale HTTP/1.1
+content-type: /application/json
+
+{
+   "description": "Apple",
+   "qty": 2,
+   "price": 200,
+   "total": 400,
+    "userId": "6381fac57452238035e07f57"   
 }

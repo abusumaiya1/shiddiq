@@ -4,13 +4,13 @@ const userSchema = new mongoose.Schema({
 
     email: {
         type: String,
-        required: true,
-        unique: true,
         trim: true
     },
 
     password: {
         type: String,
+        
+        
         
     },
 
@@ -36,11 +36,21 @@ const userSchema = new mongoose.Schema({
         type: String,
         enum: ['Admin', 'User'],
         default: 'User'
-    }
+    },
 
-}, 
+ 
+
+   sales:[
+    {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'sale'
+    }
+  ]
+
+},
 
     { timestamps: true }
+
 )
 
 userSchema.set('toJSON', {
@@ -54,6 +64,6 @@ userSchema.set('toJSON', {
     }
 })
 
-const user = mongoose.model('user', userSchema)
+const User = mongoose.model('user', userSchema)
 
-module.exports = user
+module.exports = User
